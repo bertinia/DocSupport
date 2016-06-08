@@ -248,6 +248,7 @@ def _translate_string(str, strtags, aliases, section, indent, linenum, filename)
     for tag in strtags:
       if (tag[0] in sectMarkers.keys()):
         lastSect = tag[0]
+        print("lastSect = {0}".format(lastSect))
         if (tag[1] != 'id'):
           _error('%s tag with missing id'%tag[0], linenum, filename)
         # End if
